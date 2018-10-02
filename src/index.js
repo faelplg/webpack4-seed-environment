@@ -1,15 +1,36 @@
-function generateComponent() {
-  const element__ = document.createElement('DIV');
-  element__.className = 'container';
+import './base.scss';
+import MyImg from './assets/images/mountain.jpg';
+class Generator {
+  createParagraph(__string) {
+    const textNode = document.createTextNode(__string);
+    const paragraphElement = document.createElement('P');
+    paragraphElement.appendChild(textNode);
+    return paragraphElement;
+  }
 
-  const paragraph = document.createElement('P');
-  const txt = document.createTextNode('Boo! ƪ(ړײ)ƪ');
+  createImg(__source, __width, __height) {
+    const imgElement = new Image(__width, __height);
+    imgElement.src = __source;
+    return imgElement;
+  }
 
-  paragraph.appendChild(txt);
-  element__.appendChild(paragraph);
-
-  console.log('My JavaScript log.');
-
-  return element__;
+  createDiv(__innerNode) {
+    const divElement = document.createElement('DIV');
+    if (__innerNode) {
+      divElement.appendChild(__innerNode);
+    }
+    return divElement;
+  }
 }
-document.body.appendChild(generateComponent());
+
+const gen = new Generator;
+const par = gen.createParagraph('Boo! ƪ(ړײ)ƪ');
+const myImg = gen.createImg(MyImg, 300, 450);
+const div = gen.createDiv(par);
+
+div.appendChild(myImg);
+/* eslint-disable no-console */
+console.log('This is my image address', MyImg);
+/* eslint-enable no-console */
+
+document.body.appendChild(div);

@@ -1,0 +1,6 @@
+$backgroundColor: lightblue;
+body {
+  background-color: $backgroundColor;
+}
+
+@import './assets/stylesheets/typography.scss';
