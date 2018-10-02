@@ -17,7 +17,7 @@ npm install
 ## Running
 The next commands are production ready to use in your project.
 
-Run the project in development mode served in `localhost:3000`:
+Run the project in development mode served in `localhost:8080`:
 ```
 npm run serve
 ```
