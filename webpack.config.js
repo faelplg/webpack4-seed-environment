@@ -37,6 +37,11 @@ let config = {
         'sass-loader'
       ]
     },{
+      test: /\.html$/,
+      loaders: [
+        'html-loader'
+      ]
+    },{
       test: /\.(jpe?g|png|gif|svg)$/i,
       loaders: [{
         loader: 'file-loader',
@@ -47,8 +52,11 @@ let config = {
     }]
   },
   devServer: {
-    contentBase: path.resolve(__dirname, 'public'),
-    open: true
+    historyApiFallback: true,
+    contentBase: path.resolve(__dirname, 'src'),
+    watchContentBase: true,
+    open: true,
+    clientLogLevel: 'none'
   }
 };
 module.exports = config;
