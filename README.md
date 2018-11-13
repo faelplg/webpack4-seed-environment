@@ -9,15 +9,17 @@ Before installing the dependencies, make sure that you are using compatible vers
 
 > The `npm` +6.0 has some memory issues related to `tunnel-agent`. Please avoid this version for now. See [this issue](https://github.com/request/tunnel-agent/issues/41).
 
-After cloning the repository, run the following command to install the package dependencies:
+Fork the repository and clone it into your environment.
+
+Then run the following command to install the package dependencies:
 ```
 npm install
 ```
 
 ## Running
-The next commands are production ready to use in your project.
+The next commands are ready to use in your project.
 
-Run the project in development mode served in `localhost:3000`:
+Run the project in development mode served in `localhost:8080`:
 ```
 npm run serve
 ```
